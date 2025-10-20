@@ -14,7 +14,7 @@ const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
+    origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
     methods: ['GET', 'POST'],
   },
 });
@@ -51,8 +51,8 @@ setupSocketHandlers(io);
 
 const PORT = process.env.PORT || 5000;
 httpServer.listen(PORT, () => {
-  console.log(`\n🚀 Server running on port ${PORT}`);
-  console.log(`📡 Socket.io ready for connections`);
-  console.log(`🌐 CORS enabled for: ${process.env.CORS_ORIGIN}`);
-  console.log(`\n✨ Ready to accept players!\n`);
+  console.log(`Server running on port ${PORT}`);
+  console.log(`Socket.io ready for connections`);
+  console.log(`CORS enabled for: ${process.env.CORS_ORIGIN}`);
+  console.log(`Ready to accept players!\n`);
 });
