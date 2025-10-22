@@ -93,26 +93,26 @@ The game features matchmaking, live updates via WebSockets, and a leaderboard th
 ## How to Run Locally
 
 ### Backend Setup
-cd server
-npm install
-PORT=8000
-npm start
+- cd server
+- npm install
+- PORT=8000
+- npm start
 
 ### Frontend Setup
-cd client
-npm install
-REACT_APP_API_URL=http://localhost:8000
-npm start
+- cd client
+- npm install
+- REACT_APP_API_URL=http://localhost:8000
+- npm start
 
 ---
 
 ### Future Enhancements
-In-game chat system
-Custom room codes to play with friends
-AI Bot Mode for solo play
-Sound effects & move animations
-Account-based leaderboard using MongoDB
+- In-game chat system
+- Custom room codes to play with friends
+- AI Bot Mode for solo play
+- Sound effects & move animations
+- Account-based leaderboard using MongoDB
 
 ### GitHub Repositories
-Frontend: https://github.com/Aradhyagarg/Lila_Games_frontend
-Backend: https://github.com/Aradhyagarg/Lila_Games_backend
+- Frontend: https://github.com/Aradhyagarg/Lila_Games_frontend
+- Backend: https://github.com/Aradhyagarg/Lila_Games_backend
