@@ -12,7 +12,7 @@ const gameSchema = new mongoose.Schema({
       ref: 'User'
     },
     nickname: String,
-    symbol: String, // 'X' or 'O'
+    symbol: String,
     socketId: String
   }],
   board: {

@@ -1,7 +1,7 @@
 import gameService from '../../services/gameService.js';
-   import matchmakingService from '../../services/matchmakingService.js';
-   import leaderboardService from '../../services/leaderboardService.js';
-   import User from '../../models/Users.js';
+import matchmakingService from '../../services/matchmakingService.js';
+import leaderboardService from '../../services/leaderboardService.js';
+import User from '../../models/Users.js';
 
 const activeGames = new Map();
 const activePlayers = new Map();
@@ -52,7 +52,7 @@ export default function setupSocketHandlers(io) {
 
         matchmakingService.addToQueue(player);
         socket.emit('searching', { queueLength: matchmakingService.getQueueLength() });
-        console.log(`🔍 ${player.nickname} searching for match. Queue: ${matchmakingService.getQueueLength()}`);
+        console.log(`${player.nickname} searching for match. Queue: ${matchmakingService.getQueueLength()}`);
 
         const match = matchmakingService.findMatch();
         if (match) {
@@ -91,7 +91,7 @@ export default function setupSocketHandlers(io) {
             currentTurn: game.currentTurn,
           });
 
-          console.log(`🎮 Match created: ${player1.nickname} vs ${player2.nickname}`);
+          console.log(`Match created: ${player1.nickname} vs ${player2.nickname}`);
         }
       } catch (error) {
         console.error('Find match error:', error);
@@ -148,7 +148,7 @@ export default function setupSocketHandlers(io) {
           });
 
           activeGames.delete(gameId);
-          console.log(`🏁 Game finished: ${gameId}`);
+          console.log(`Game finished: ${gameId}`);
         }
       } catch (error) {
         console.error('Make move error:', error);
