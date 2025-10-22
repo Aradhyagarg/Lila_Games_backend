@@ -1,96 +1,98 @@
-TicTacToe Multiplayer Game
+# 🎮 TicTacToe Multiplayer Game
 
-Live Demo
-Frontend: https://lila-games-frontend.vercel.app
-Backend: https://lila-games-backend-1.onrender.com
+A real-time, socket-based multiplayer TicTacToe game where two players can battle live, track their results, and appear on a global leaderboard.
 
-Tech Stack
-Frontend
-React.js
-CSS3
-Socket.io-client
+---
 
-Backend
-Node.js
-Express.js
-Socket.io
+## 🚀 Live Demo
 
-Hosting
-Vercel (Frontend)
-Render (Backend)
+- **Frontend:** [https://lila-games-frontend.vercel.app](https://lila-games-frontend.vercel.app)  
+- **Backend:** [https://lila-games-backend-1.onrender.com](https://lila-games-backend-1.onrender.com)
 
-Project Overview
-This is a real-time multiplayer TicTacToe game where two players can join a match, play live, and view leaderboards.
+---
 
-Players can
-Enter nickname & start matchmaking
-Get paired with a random opponent
-Play live TicTacToe in real-time
-See player turn indicators (My Turn / Opponent Turn)
-View win/loss/draw status instantly
-Access leaderboard showing player stats
+## 🧠 Tech Stack
 
-Features Implemented
+### 🎨 Frontend
+- React.js  
+- CSS3  
+- Socket.io-client  
 
-Frontend
-Responsive and minimalist UI design
-Real-time game updates using Socket.io-client
-Dynamic turn indicators for both players
-Smooth transition animations
-Matchmaking screen with player waiting logic
-Leaderboard overlay displaying global player rankings
-Nickname entry and validation before joining the match
+### ⚙️ Backend
+- Node.js  
+- Express.js  
+- Socket.io  
 
-Backend
-Real-time connection management using Socket.io
-Dynamic room creation for each match
-Player matchmaking logic
-Game state tracking (turns, moves, winner detection)
-Leaderboard storage and update mechanism
-Express.js API integration for future scalability
+### ☁️ Hosting
+- Vercel (Frontend)  
+- Render (Backend)
 
-How It Works
-Nickname Entry
-Player enters their name on the main screen
-Nickname stored in local session
-Matchmaking
-Player joins matchmaking lobby
-Server pairs two available players automatically
+---
 
-Gameplay
-Players make moves in real time using socket events
-Game board updates instantly for both users
-Server checks for a win, draw, or invalid move
-Turn indicators show whose turn it is
+## 📘 Project Overview
 
-Leaderboard
-After match ends, player stats are updated (Win/Loss/Draw)
-Leaderboard fetched dynamically via backend endpoint
+This project is a **real-time multiplayer TicTacToe game** that allows two players to connect instantly and play against each other live.  
+The game features matchmaking, live updates via WebSockets, and a leaderboard that tracks wins, losses, and draws.
 
-How to Run Locally
-Backend
+---
+
+## 🧩 Players Can
+
+- Enter a nickname and join matchmaking  
+- Get paired with a random opponent  
+- Play live TicTacToe in real-time  
+- See **turn indicators** (My Turn / Opponent Turn)  
+- Instantly view **win/loss/draw results**  
+- Access the **leaderboard** showing player stats  
+
+---
+
+## ✨ Features Implemented
+
+### 🖥️ Frontend
+- Responsive, clean, and minimal UI  
+- Real-time updates powered by **Socket.io-client**  
+- Smooth board animations and hover effects  
+- Dynamic **turn indicators**  
+- Matchmaking screen with waiting player logic  
+- Leaderboard overlay displaying global rankings  
+- Nickname validation before joining a match  
+
+### ⚙️ Backend
+- **Socket.io-based real-time communication**  
+- Dynamic **room creation** for each match  
+- Player **matchmaking algorithm**  
+- Game state tracking (turns, moves, winner)  
+- Leaderboard update logic after every match  
+- Express.js API setup for scalability  
+
+---
+
+## 🕹️ How It Works
+
+### 🧑‍💻 Nickname Entry
+- Player enters their nickname  
+- Stored locally for the session  
+
+### 🔗 Matchmaking
+- Player joins the matchmaking pool  
+- Server pairs them automatically with another waiting player  
+
+### 🎮 Gameplay
+- Players take turns in real time via socket events  
+- Both boards update instantly  
+- Server validates moves and detects winners/draws  
+- Turn indicators reflect current player turn  
+
+### 🏆 Leaderboard
+- Player stats (Win/Loss/Draw) get updated after each game  
+- Leaderboard fetched dynamically from backend  
+
+---
+
+## ⚡ How to Run Locally
+
+### 🔧 Backend Setup
+```bash
 cd server
 npm install
-.env
-Set environment variables:
-PORT=8000
-npm start
-
-Frontend
-cd client
-npm install
-.env
-Set API endpoint:
-REACT_APP_API_URL=http://localhost:8000
-npm start
-
-Future Enhancements
-Add Chat System between players during gameplay
-Implement Custom Room Codes to play with friends
-Introduce AI Bot Mode for solo gameplay
-Add Sound Effects & Animations for moves and wins
-Enable Account-based leaderboard tracking via MongoDB
-
-Github URL
-Frontend - https://github.com/Aradhyagarg/Lila_Games_frontend
-Backend - https://github.com/Aradhyagarg/Lila_Games_backend
